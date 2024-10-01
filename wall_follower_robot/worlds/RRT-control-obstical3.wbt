@@ -1,0 +1,80 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.07497054009651753 -0.09707889156911531 -0.9924490450039984 4.960610234529161
+  position -0.9588089964274111 -2.0573151340884785 0.6226281243677939
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+}
+DEF circle Solid {
+  translation 0 0.11 0.09
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.124117 0.55108 0.753658
+      }
+      geometry Cylinder {
+        height 0.15
+        radius 0.5
+      }
+    }
+  ]
+  name "circle"
+  boundingObject Shape {
+  }
+}
+DEF circle1 Solid {
+  translation 0.8 0 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.124117 0.55108 0.753658
+      }
+      geometry Cylinder {
+        height 0.15
+        radius 0.15
+      }
+    }
+  ]
+  name "circle(1)"
+}
+DEF circle2 Solid {
+  translation -0.71 -0.37 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.124117 0.55108 0.753658
+      }
+      geometry Cylinder {
+        height 0.15
+        radius 0.25
+      }
+    }
+  ]
+  name "circle(2)"
+}
+DEF epuck E-puck {
+  translation 0.19681412969677325 -0.12433412256309118 -6.394891191158388e-05
+  rotation 0.000576751424366932 -3.303331354200908e-05 -0.9999998331332833 -3.027205726508356
+  name "epuck"
+  controller "my_controller-obstical3"
+  supervisor TRUE
+  turretSlot [
+    DEF compass Compass {
+    }
+    DEF gps GPS {
+    }
+  ]
+}

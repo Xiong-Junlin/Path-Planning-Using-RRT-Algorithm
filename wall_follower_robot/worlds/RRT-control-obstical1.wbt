@@ -1,0 +1,45 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.4079495589158291 0.029348491077730063 -0.91253264240346 3.0104759778066175
+  position 2.2383757445086983 0.22233044748932557 2.3408046602483035
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+}
+DEF circle Solid {
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.124117 0.55108 0.753658
+      }
+      geometry Cylinder {
+        height 0.15
+        radius 0.5
+      }
+    }
+  ]
+  name "circle"
+}
+E-puck {
+  translation 0.8 0.8 0
+  rotation 0.8269629511119351 0.56225641362235 5.31862015522749e-05 3.095242908176733e-09
+  name "epuck"
+  controller "my_controller-RRTrobotfollowing"
+  supervisor TRUE
+  turretSlot [
+    DEF gps GPS {
+    }
+  ]
+}

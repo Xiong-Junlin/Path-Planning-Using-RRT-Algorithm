@@ -1,0 +1,121 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.6964214865675732 0.0012671034723115157 -0.7176318746375485 3.138977205444283
+  position 0.14801864493294567 0.11380730755107749 3.4932429449829216
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+}
+DEF circle Solid {
+  translation -0.19 -0.11 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.124117 0.55108 0.753658
+      }
+      geometry Cylinder {
+        height 0.15
+        radius 0.2
+      }
+    }
+  ]
+  name "circle"
+}
+DEF circle1 Solid {
+  translation -0.65 0.7 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.124117 0.55108 0.753658
+      }
+      geometry Cylinder {
+        height 0.15
+        radius 0.2
+      }
+    }
+  ]
+  name "circle(1)"
+}
+DEF circle2 Solid {
+  translation 0.64 0 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.124117 0.55108 0.753658
+      }
+      geometry Cylinder {
+        height 0.15
+        radius 0.3
+      }
+    }
+  ]
+  name "circle(2)"
+}
+DEF circle3 Solid {
+  translation 0 0.44 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.124117 0.55108 0.753658
+      }
+      geometry Cylinder {
+        height 0.15
+        radius 0.2
+      }
+    }
+  ]
+  name "circle(3)"
+}
+DEF circle4 Solid {
+  translation 0.02 -0.64 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.124117 0.55108 0.753658
+      }
+      geometry Cylinder {
+        height 0.15
+        radius 0.3
+      }
+    }
+  ]
+  name "circle(4)"
+}
+DEF circle5 Solid {
+  translation -0.77 -0.22 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.124117 0.55108 0.753658
+      }
+      geometry Cylinder {
+        height 0.15
+        radius 0.2
+      }
+    }
+  ]
+  name "circle(5)"
+}
+E-puck {
+  translation 0.8 0.8 0
+  rotation 0.8269629511119351 0.56225641362235 5.31862015522749e-05 3.095242908176733e-09
+  name "epuck"
+  controller "my_controller-obstical9"
+  supervisor TRUE
+  turretSlot [
+    DEF gps GPS {
+    }
+  ]
+}
